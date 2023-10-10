@@ -30,7 +30,7 @@ class Lampa {
     this.setSzin();
   }
 
-/*  valtozas() {
+ /* valtozas() {
     if (this.#allapot === true) {
       this.#allapot = false;
       this.setSzin();
