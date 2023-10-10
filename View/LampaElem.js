@@ -11,7 +11,7 @@ class Lampa {
     this.#divElem = szuloElem.children(".elem:last-child");
     this.#divElem.on("click", () => {
       this.sajatEsemeny();
-       this.valtozas()
+      // this.valtozas()
     });
   }
 
@@ -22,7 +22,6 @@ class Lampa {
     `;
     txt += "";
     this.szuloElem.append(txt);
-    this.setSzin()
   }
 
 
@@ -41,8 +40,20 @@ class Lampa {
     }
   }*/
 
+  setSzin() {
+    for (let index = 0; index < 9; index++) {
+      const element = Math.floor(Math.random() * 2);
+      if (element === 0) {
+        this.#allapot = false;
+        this.#divElem.css("background-color", "red");
+      } else {
+        this.#allapot = true;
+        this.#divElem.css("background-color", "purple");
+      }
+    }
+  }
 
-  
+  /*
   setSzin() {
   if (this.#allapot) {
     this.#divElem.css("background-color", "purple");
@@ -50,7 +61,8 @@ class Lampa {
     this.#divElem.css("background-color", "red");
   }
 }
-  
+  */
+
   getId() {
     return this.#id;
   }
